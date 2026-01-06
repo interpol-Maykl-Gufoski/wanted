@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>INTERLOL — почти как Interpol</title>
+  <style>
+    :root{
+      --red:#c8102e;
+      --dark:#0f0f12;
+      --gray:#9aa0a6;
+      --white:#ffffff;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      background: radial-gradient(1200px 600px at 50% -200px, #1b1b22, var(--dark));
+      color:var(--white);
+      line-height:1.5;
+    }
+    header{
+      position:sticky; top:0; z-index:10;
+      background:rgba(15,15,18,.85);
+      backdrop-filter: blur(6px);
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .nav{
+      max-width:1100px; margin:0 auto; padding:14px 20px;
+      display:flex; align-items:center; justify-content:space-between;
+    }
+    .logo{
+      font-weight:900; letter-spacing:3px;
+      color:var(--red);
+    }
+    .logo span{color:#fff}
+    .nav a{
+      color:#fff; text-decoration:none; margin-left:18px; font-size:14px;
+      opacity:.85
+    }
+    .nav a:hover{opacity:1}
+
+    .hero{
+      max-width:1100px; margin:0 auto; padding:90px 20px 60px;
+      display:grid; grid-template-columns: 1.2fr .8fr; gap:40px;
+    }
+    .badge{
+      display:inline-block; border:1px solid var(--red); color:var(--red);
+      padding:6px 10px; font-size:12px; letter-spacing:1px; margin-bottom:14px
+    }
+    h1{
+      font-size:56px; line-height:1.05; margin-bottom:16px
+    }
+    h1 em{color:var(--red); font-style:normal}
+    .lead{color:#e5e7eb; max-width:520px}
+    .cta{margin-top:26px}
+    .btn{
+      display:inline-block; padding:14px 20px; margin-right:12px;
+      border:1px solid var(--red); color:#fff; text-decoration:none;
+      background:linear-gradient(180deg, rgba(200,16,46,.25), rgba(200,16,46,.05));
+    }
+    .btn.alt{border-color:#444; background:transparent}
+
+    .poster{
+      border:1px dashed rgba(255,255,255,.25);
+      height:360px; display:grid; place-items:center;
+      background:linear-gradient(135deg, rgba(200,16,46,.15), rgba(255,255,255,.03));
+    }
+    .poster .stamp{
+      border:3px solid var(--red); padding:18px 22px;
+      font-weight:900; letter-spacing:2px; color:var(--red);
+      transform:rotate(-6deg)
+    }
+
+    section{
+      max-width:1100px; margin:0 auto; padding:60px 20px
+    }
+    .grid{display:grid; grid-template-columns: repeat(3,1fr); gap:24px}
+    .card{
+      border:1px solid rgba(255,255,255,.1);
+      padding:22px; background:rgba(255,255,255,.03)
+    }
+    .card h3{color:var(--red); margin-bottom:8px}
+    .muted{color:var(--gray)}
+
+    footer{
+      border-top:1px solid rgba(255,255,255,.1);
+      padding:26px 20px; text-align:center; color:var(--gray)
+    }
+
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      h1{font-size:44px}
+      .grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="logo">INTER<span>LOL</span></div>
+      <nav>
+        <a href="#about">О нас</a>
+        <a href="#cases">Дела</a>
+        <a href="#alerts">Розыск</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <span class="badge">ПАРОДИЯ • НЕ ОФИЦИАЛЬНО</span>
+        <h1>Международная <em>Очень</em> Секретная Организация</h1>
+        <p class="lead">Почти как Interpol, только без погонь, но с формами и строгими шрифтами. Любые совпадения — случайны и смешны.</p>
+        <div class="cta">
+          <a class="btn" href="#cases">Открыть дело</a>
+          <a class="btn alt" href="#about">Читать легенду</a>
+        </div>
+      </div>
+      <div class="poster">
+        <div class="stamp">CONFIDENTIAL*</div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="grid">
+        <div class="card">
+          <h3>Миссия</h3>
+          <p class="muted">Делать вид, что мы глобальны, серьезны и очень заняты.</p>
+        </div>
+        <div class="card">
+          <h3>Юрисдикция</h3>
+          <p class="muted">Везде и нигде. В основном — на этой странице.</p>
+        </div>
+        <div class="card">
+          <h3>Прозрачность</h3>
+          <p class="muted">Максимальная, кроме всего важного.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="cases">
+      <div class="grid">
+        <div class="card">
+          <h3>Дело №404</h3>
+          <p class="muted">Подозреваемый не найден. Страница тоже.</p>
+        </div>
+        <div class="card">
+          <h3>Дело №1337</h3>
+          <p class="muted">Слишком элитно, чтобы объяснять.</p>
+        </div>
+        <div class="card">
+          <h3>Дело №007</h3>
+          <p class="muted">Без комментариев.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="alerts">
+      <div class="card">
+        <h3>Красное уведомление</h3>
+        <p class="muted">Ищется чувство юмора. Вознаграждение — аплодисменты.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="card">
+        <h3>Связаться</h3>
+        <p class="muted">Почта: nobody@interlol.example<br/>Телефон: +00 000 000 00 00</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>* Сайт является пародией и не связан с реальными организациями.</small>
+  </footer>
+</body>
+</html>
